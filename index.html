@@ -1,0 +1,240 @@
+<html>
+	<head>
+		<title>BeagleBone Pinmuxing Reference</title>
+		<script type="text/json" id="scpt">
+		
+		
+		[["1", "NA", "GND", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],["2", "NA", "GND", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA"],["3", "0x018", "gpmc_ad6", "gpmc_ad6", "mmc1_dat6", "NA", "NA", "NA", "NA", "NA", "gpio1[6]"],["4", "0x01C", "gpmc_ad7", "gpmc_ad7", "mmc1_dat7", "NA", "NA", "NA", "NA", "NA", "gpio1[7]"],["5", "0x008", "gpmc_ad2", "gpmc_ad2", "mmc1_dat2", "NA", "NA", "NA", "NA", "NA", "gpio1[2]"],["6", "0x00C", "gpmc_ad3", "gpmc_ad3", "mmc1_dat3", "NA", "NA", "NA", "NA", "NA", "gpio1[3]"],["7", "0x090", "gpmc_advn_ale", "gpmc_advn_ale", "NA", "timer4", "NA", "NA", "NA", "NA", "gpio2[2]"],["8", "0x094", "gpmc_oen_ren", "gpmc_oen_ren", "NA", "timer7", "NA", "NA", "NA", "NA", "gpio2[3]"],["9", "0x09C", "gpmc_ben0_cle", "gpmc_be0n_cle", "NA", "timer5", "NA", "NA", "NA", "NA", "gpio2[5]"],["10", "0x098", "gpmc_wen", "gpmc_wen", "NA", "timer6", "NA", "NA", "NA", "NA", "gpio2[4]"],["11", "0x034", "gpmc_ad13", "gpmc_ad13", "lcd_data18", "mmc1_dat5", "mmc2_dat1", "eQEP2B_in", "NA", "NA", "gpio1[13]"],["12", "0x030", "gpmc_ad12", "gpmc_ad12", "lcd_data19", "mmc1_dat4", "mmc2_dat0", "eQEP2A_IN", "NA", "pru0_r31_14", "gpio1[12]"],["13", "0x024", "gpmc_ad9", "gpmc_ad9", "lcd_data22", "mmc1_dat1", "mmc2_dat5", "ehrpwm2B", "NA", "pru0_r31_15", "gpio0[23]"],["14", "0x028", "gpmc_ad10", "gpmc_ad10", "lcd_data21", "mmc1_dat2", "mmc2_dat6", "ehrpwm2_tripzone_in", "NA", "NA", "gpio0[26]"],["15", "0x03C", "gpmc_ad15", "gpmc_ad15", "lcd_data16", "mmc1_dat7", "mmc2_dat3", "eQEP2_strobe", "NA", "pru0_r30_15", "gpio1[15]"],["16", "0x038", "gpmc_ad14", "gpmc_ad14", "lcd_data17", "mmc1_dat6", "mmc2_dat2", "eQEP2_index", "NA", "pru0_r30_14", "gpio1[14]"],["17", "0x02C", "gpmc_ad11", "gpmc_ad11", "lcd_data20", "mmc1_dat3", "mmc2_dat7", "ehrpwm0_synco", "NA", "NA", "gpio0[27]"],["18", "0x08C", "gpmc_clk", "gpmc_clk", "lcd_memory_clk", "gpmc_wait1", "mmc2_clk", "NA", "NA", "mcasp0_fsr", "gpio2[1]"],["19", "0x020", "gpmc_ad8", "gpmc_ad8", "lcd_data23", "mmc1_dat0", "mmc2_dat4", "ehrpwm2A", "NA", "NA", "gpio0[22]"],["20", "0x084", "gpmc_csn2", "gpmc_csn2", "gpmc_be1n", "mmc1_cmd", "NA", "NA", "pru1_r30_13", "pru1_r31_13", "gpio1[31]"],["21", "0x080", "gpmc_csn1", "gpmc_csn1", "gpmc_clk", "mmc1_clk", "NA", "NA", "pru1_r30_12", "pru1_r31_12", "gpio1[30]"],["22", "0x014", "gpmc_ad5", "gpmc_ad5", "mmc1_dat5", "NA", "NA", "NA", "NA", "gpio1[5]", ""],["23", "0x010", "gpmc_ad4", "gpmc_ad4", "mmc1_dat4", "NA", "NA", "NA", "NA", "NA", "gpio1[4]"],["24", "0x004", "gpmc_ad1", "gpmc_ad1", "mmc1_dat1", "NA", "NA", "NA", "NA", "NA", "gpio1[1]"],["25", "0x000", "gpmc_ad0", "gpmc_ad0", "mmc1_dat0", "NA", "NA", "NA", "NA", "NA", "gpio1[0]"],["26", "0x07C", "gpmc_csn0", "gpmc_csn0", "NA", "NA", "NA", "NA", "NA", "gpio1[29]", "NA"],["27", "0x0E0", "lcd_vsync", "lcd_vsync", "gpmc_a8", "NA", "NA", "NA", "pru1_r30_8", "pru1_r31_8", "gpio2[22]"],["28", "0x0E8", "lcd_pclk", "lcd_pclk", "gpmc_a10", "NA", "NA", "NA", "pru1_r30_10", "pru1_r31_10", "gpio2[24]"],["29", "0x0E4", "lcd_hsync", "lcd_hsync", "gpmc_a9", "NA", "NA", "NA", "pru1_r30_9", "pru1_r31_9", "gpio2[23]"],["30", "0x0EC", "lcd_ac_bias_en", "lcd_ac_bias_en", "gpmc_a11", "NA", "NA", "NA", "pru1_r30_11", "pru1_r31_11", "gpio2[25]"],["31", "0x0D8", "lcd_data14", "lcd_data14", "gpmc_a18", "eQEP1_index", "mcasp0_axr1", "uart5_rxd", "NA", "uart5_ctsn", "gpio0[10]"],["32", "0x0DC", "lcd_data15", "lcd_data15", "gpmc_a19", "eQEP1_strobe", "mcasp0_ahclkx", "mcasp0_axr3", "NA", "uart5_rtsn", "gpio0[11]"],["33", "0x0D4", "lcd_data13", "lcd_data13", "gpmc_a17", "eQEP1B_in", "mcasp0_fsr", "mcasp0_axr3", "NA", "uart4_rtsn", "gpio0[9]"],["34", "0x0CC", "lcd_data11", "lcd_data11", "gpmc_a15", "ehrpwm1B", "mcasp0_ahclkr", "mcasp0_axr2", "NA", "uart3_rtsn", "gpio2[17]"],["35", "0x0D0", "lcd_data12", "lcd_data12", "gpmc_a16", "eQEP1A_in", "mcasp0_aclkr", "mcasp0_axr2", "NA", "uart4_ctsn", "gpio0[8]"],["36", "0x0C8", "lcd_data10", "lcd_data10", "gpmc_a14", "ehrpwm1A", "mcasp0_axr0", "NA", "NA", "uart3_ctsn", "gpio2[16]"],["37", "0x0C0", "lcd_data8", "lcd_data8", "gpmc_a12", "ehrpwm1_tripzone_in", "mcasp0_aclkx", "uart5_txd", "NA", "uart2_ctsn", "gpio2[14]"],["38", "0x0C4", "lcd_data9", "lcd_data9", "gpmc_a13", "ehrpwm0_synco", "mcasp0_fsx", "uart5_rxd", "NA", "uart2_rtsn", "gpio2[15]"],["39", "0x0B8", "lcd_data6", "lcd_data6", "gpmc_a6", "NA", "eQEP2_index", "NA", "pru1_r30_6", "pru1_r31_6", "gpio2[12]"],["40", "0x0BC", "lcd_data7", "lcd_data7", "gpmc_a7", "NA", "eQEP2_strobe", "pr1_edio_data_out7", "", "pru1_r30_7", "pru1_r31_7", "gpio2[13]"],["41", "0x0B0", "lcd_data4", "lcd_data4", "gpmc_a4", "NA", "eQEP2A_in", "NA", "pru1_r30_4", "pru1_r31_4", "gpio2[10]"],["42", "0x0B4", "lcd_data5", "lcd_data5", "gpmc_a5", "NA", "eQEP2B_in", "NA", "pru1_r30_5", "pru1_r31_5", "gpio2[11]"],["43", "0x0A8", "lcd_data2", "lcd_data2", "gpmc_a2", "NA", "ehrpwm2_tripzone_in", "NA", "pru1_r30_2", "pru1_r31_2", "gpio2[8]"],["44", "0x0AC", "lcd_data3", "lcd_data3", "gpmc_a3", "NA", "ehrpwm0_synco", "NA", "pru1_r30_3", "pru1_r31_3", "gpio2[9]"],["45", "0x0A0", "lcd_data0", "lcd_data0", "gpmc_a0", "NA", "ehrpwm2A", "NA", "pru1_r30_0", "pru1_r31_0", "gpio2[6]"],["46", "0x0A4", "lcd_data1", "lcd_data1", "gpmc_a1", "NA", "ehrpwm2B", "NA", "pru1_r30_1", "pru1_r31_1", "gpio2[7]"]]
+		</script>
+		
+		<script type="text/json" id="p9">
+		[
+["1","NA","GND","GND","NA","NA","NA","NA","NA","NA","NA","NA"],
+["2","NA","GND","GND","NA","NA","NA","NA","NA","NA","NA","NA"],
+["3","NA","VDD_3V3EXP","VDD_3V3EXP","NA","NA","NA","NA","NA","NA","NA","NA"],
+["4","NA","VDD_3V3EXP","VDD_3V3EXP","NA","NA","NA","NA","NA","NA","NA","NA"],
+["5","NA","VDD_5V","VDD_5V","NA","NA","NA","NA","NA","NA","NA","NA"],
+["6","NA","VDD_5V","VDD_5V","NA","NA","NA","NA","NA","NA","NA","NA"],
+["7","NA","SYS_5V","SYS_5V","NA","NA","NA","NA","NA","NA","NA","NA"],
+["8","NA","SYS_5V","SYS_5V","NA","NA","NA","NA","NA","NA","NA","NA"],
+["9","NA","PWR_BUT*","NA","NA","NA","NA","NA","NA","NA","NA"],
+["10","NA","RESET_OUT","RESET_OUT","NA","NA","NA","NA","NA","NA"],
+["11","0x070","gpmc_wait0","gpmc_wait0","mii2_crs","gpmc_csn4","rmii2_crs_dv","mmc1_sdcd","NA","uart4_rxd","gpio0[30]"],
+["12","0x078","gpmc_be1n","gpmc_be1n","mii2_col","gpmc_csn6","mmc2_dat3","gpmc_dir","NA","mcasp0_aclkr","gpio1[28]"],
+["13","0x074","gpmc_wpn","gpmc_wpn","mii2_rxerr","gpmc_csn5","rmii2_rxerr","mmc2_sdcd","NA","uart4_txd","gpio0[31]"],
+["14","0x040","gpmc_a2","gpmc_a2","mii2_txd3","rgmii2_td3","mmc2_dat1","gpmc_a18","NA","ehrpwm1A","gpio1[18]"],
+["15","0x048","gpmc_a0","gpmc_a0","gmii2_txen","rmii2_tctl","mii2_txen","gpmc_a16","NA","ehrpwm1_tripzone_input","gpio1[16]"],
+["16","0x04C","gpmc_a3","gpmc_a3","mii2_txd2","rgmii2_td2","mmc2_dat2","gpmc_a19","NA","ehrpwm1B","gpio1[19]"],
+["17","0x15C","spi0_cs0","spi0_cs0","mmc2_sdwp","i2c1_scl","ehrpwm0_synci","NA","NA","NA","gpio0[5]"],
+["18","0x158","spi0_d1","spi0_d1","mmc1_sdwp","i2c1_sda","ehrpwm0_tripzone","NA","NA","NA","gpio0[4]"],
+["19","0x17C","uart1_rtsn","uart1_rtsn","timer5","dcan0_rx","i2c2_scl","spi1_cs1","NA","gpio0[13]"],
+["20","0x178","uart1_ctsn","uart1_ctsn","timer6","dcan0_tx","i2c2_sda","spi1_cs0","NA","NA","gpio0[12]"],
+["21","0x154","spi0_d0","spi0_d0","uart2_txd","i2c2_scl","ehrpwm0B","NA","EMU3","gpio0[3]"],
+["22","0x150","spi0_sclk","spi0_sclk","uart2_rxd","i2c2_sda","ehrpwm0A","NA","EMU2","gpio0[2]"],
+["23","0x044","gpmc_a1","gpmc_a1","gmii2_rxdv","rgmii2_rxdv","mmc2_dat0","gpmc_a17","ehrpwm0_synco","gpio1[17]"],
+["24","0x084","uart1_txd","uart1_txd","mmc2_sdwp","dcan1_rx","i2c1_scl","NA","NA","NA","pru0_r31_16","gpio0[15]"],
+["25","0x1AC","mcasp0_ahclkx","mcasp0_ahclkx","eQEP0_strobe","mcasp0_axr3","mcasp1_axr1","EMU4","pru0_r30_7","pru0_r31_7","gpio3[21]"],
+["26","0x080","uart1_rxd","uart1_rxd","mmc1_sdwp","dcan1_tx","i2c1_sda","NA","NA","NA","pru1_r30_16","gpio0[14]"],
+["27","0x1A4","mcasp0_fsr","mcasp0_fsr","eQEP0B_in","mcasp0_axr3","mcasp1_fsx","EMU2","pru0_r30_5","pru0_r31_5","gpio3[19]"],
+["28","0x19C","mcasp0_ahclkr","mcasp0_ahclkr","ehrpwm0_synci","mcasp0_axr2","spi1_cs0","ecap2_in_pwm2_out","pru0_r30_3","pru0_r31_3","gpio3[17]"],
+["29","0x194","mcasp0_fsx","mcasp0_fsx","ehrpwm0B","spi1_d0","mmc1_sdcd","pru0_r30_1","pru0_r31_1","gpio3[15]"],
+["30","0x198","mcasp0_axr0","mcasp0_axr0","ehrpwm0_tripzone","NA","NA","spi1_d1","mmc2_sdcd","pru0_r30_2","pru0_r31_2","gpio3[16]"],
+["31","0x190","mcasp0_aclkx","mcasp0_aclkx","ehrpwm0A","spi1_sclk","mmc0_sdcd","pru0_r30_0","pru0_r31_0","gpio3[14]"],
+["32","NA","VDD_ADC","VADC","NA","NA","NA","NA","NA","NA","NA","NA"],
+["33","NA","AIN4","NA","NA","NA","NA","NA","NA","NA","NA"],
+["34","NA","GNDA_ADC","AGND","NA","NA","NA","NA","NA","NA","NA","NA"],
+["35","NA","AIN6","NA","NA","NA","NA","NA","NA","NA","NA"],
+["36","NA","AIN5","NA","NA","NA","NA","NA","NA","NA","NA"],
+["37","NA","AIN2","NA","NA","NA","NA","NA","NA","NA","NA"],
+["38","NA","AIN3","NA","NA","NA","NA","NA","NA","NA","NA"],
+["39","NA","AIN0","NA","NA","NA","NA","NA","NA","NA","NA"],
+["40","NA","AIN1","NA","NA","NA","NA","NA","NA","NA","NA"],
+["41","0x1B4","xdma_event_intr1","dma_event_intr1","NA","tclkins","clkout2","timer7","NA","EMU3","gpio0[20]"],
+["41point1","0x1A8","mcasp0_axr1","eQEPO_index4s","NA","mcasp1_axr0","EMU3","pru0_r30_6","pru0_r31_6","gpio3[20]"],
+["42","0x164","ecap0_in_pwm0_out","ecap0_in_pwm0_out","uart3_txd","spi1_cs1","pr1_ecap0_ecap_cap_in_apwm_o","spi1_sclk","mmc0_sdwp","xdma_event_intr2","gpio0[7]"],
+["42.1","0x1A0","gpio3_18","mcasp0_aclkr","eQEPO_in","mcasp0_axr2","mcasp1_aclkx","pru0_r30_4","pru0_r31_4","gpio3[18]"],
+["43","GND","NA","NA","NA","NA","NA","NA","NA","NA"],
+["44","GND","NA","NA","NA","NA","NA","NA","NA","NA"],
+["45","GND","NA","NA","NA","NA","NA","NA","NA","NA"],
+["46","GND","NA","NA","NA","NA","NA","NA","NA","NA"]
+]
+</script>
+		<script src="./json-minified.js"></script>
+		<script type="text/javascript">
+		for(var x = 3; x<=46; x++) {
+			var y = x-1;
+			var pinnum;
+			
+			//mode drop-down
+			eval("var p8rowmode"+x+" = document.createElement('select');");
+				
+			//input enabled button
+			eval("var inputEnabled"+x+" = document.createElement('img');");
+			
+			//PU button
+			eval("var pu"+x+" = document.createElement('img');");
+			
+			//PD button
+			eval("var pd"+x+" = document.createElement('img');");
+			
+			//Fast button
+			eval("var fast"+x+" = document.createElement('img');");
+			
+			//register offset
+			eval("var registerOffset"+x+" = document.createElement('input');");
+			
+			//register offset
+			eval("var pinmuxmode"+x+" = document.createElement('input');");
+		}
+			
+			/*
+			var ptype = document.getElementById("ptype");
+			var pinId = document.getElementById("pinId");
+			var pinName = document.getElementById("pinName");
+			var mode = document.getElementById("mode");
+			var inputEnabled = document.getElementById("inputEnabled");
+			var puporpdownp9 = document.getElementById("puporpdownp9");
+			var fast = document.getElementById("fast");
+			var registerOffset = document.getElementById("registerOffset");
+			var pinmuxmode  = document.getElementById("pinmuxmode");*/
+			
+			var listOption;
+			var x = 1;
+			var indexp8;
+			var p9;
+			var offset;
+			var offsets = [];
+			var names = [];
+			var curRow = [];
+			var curRowNum;
+			var curModes = [];
+			var removeElements = [];
+			var greenRegExp = /_Green\.png$/;
+			var optToAdd = document.createElement("option");
+			function startup() {
+				eval("indexp8 = "+document.getElementById('scpt').innerHTML.replace(/\n/, "")+";");
+				eval("p9 = "+document.getElementById('p9').innerHTML.replace(/\n/, "")+";");
+				alert(indexp8[1]);
+				offsets = [];
+				names = [];
+				for(x=0; x<46; x++){
+					offsets.push(indexp8[x][1]);
+					names.push(indexp8[x][2]);
+				}
+				setupP8();
+				setupP9();
+			}
+			function calculate(obj) {
+				theId = obj.id.replace(/^\D+/, "");
+				alert(theId);
+				var finishedProduct = "";
+				var decPinmux = document.getElementById("mode").selectedIndex;
+				if (greenRegExp.exec(document.getElementById("fast").src) == null){
+					decPinmux += 64;
+				}
+				alert(decPinmux);
+				if (greenRegExp.exec(document.getElementById("inputEnabled").src) == null){
+					decPinmux += 32;
+				}
+				alert(decPinmux);
+				if (greenRegExp.exec(document.getElementById("PU").src) != null){
+					decPinmux += 16;
+				}
+				alert(decPinmux);
+				if (greenRegExp.exec(document.getElementById("PD").src) == null && greenRegExp.exec(document.getElementById("PU").src) == null){
+					decPinmux += 8;
+				}
+				alert(decPinmux);
+				var hexPinmux = decPinmux.toString(16);
+				if (hexPinmux.length == 2){
+					finishedProduct = "0x" + hexPinmux.toUpperCase();
+				} else {
+					finishedProduct = "0x0" + hexPinmux.toUpperCase();
+				}
+				document.getElementById("pinmuxmode").value = finishedProduct;
+			}
+			
+			function toggleColor(obj, str) {
+				alert(obj.src);
+				if(greenRegExp.exec(obj.src) != null) {
+					obj.src = "./images/" + str + "_White.png";
+				} else {
+					obj.src = "./images/" + str + "_Green.png";
+				}
+			}
+			function setupP8() {
+				var pinnum = document.createTextNode('1 '+names[0]+" GND");
+				
+				document.getElementById('p8').appendChild(pinnum);
+				document.getElementById('p8').appendChild(document.createElement('br'));
+				var pinnum = document.createTextNode('1 '+names[1]+" GND");
+				
+				document.getElementById('p8').appendChild(pinnum);
+				document.getElementById('p8').appendChild(document.createElement('br'));
+				for(var x = 3; x<=46; x++) {
+					pinnum = document.createTextNode(x+' '+names[y]+" ");
+					curModes = [];
+					curModes.push(indexp8[x][3]);
+					curModes.push(indexp8[x][4]);
+					curModes.push(indexp8[x][5]);
+					curModes.push(indexp8[x][6]);
+					curModes.push(indexp8[x][7]);
+					curModes.push(indexp8[x][8]);
+					curModes.push(indexp8[x][9]);
+					curModes.push(indexp8[x][10]);
+					curModes.push(indexp8[x][11]);
+					var y = x-1;
+					var pinnum = document.createTextNode(x+' '+names[y]+" ");
+					
+					document.getElementById('p8').appendChild(pinnum);
+					
+					//mode drop-down
+					eval("p8rowmode"+x+".id = 'p8rowmode'+x; p8rowmode"+x+".onchange = function() {calculate(this);}; document.getElementById('p8').appendChild(p8rowmode"+x+");");
+					
+					//input enabled button
+					eval("inputEnabled"+x+".src = './images/INPUT_White.png'; inputEnabled"+x+".onclick = function() {toggleColor(this, \"INPUT\"); calculate(this);}; document.getElementById('p8').appendChild(inputEnabled"+x+");");
+					
+					//PU button
+					eval("pu"+x+".src = './images/PU_White.png'; pu"+x+".onclick = function() {toggleColor(this, \"PU\"); calculate(this);}; document.getElementById('p8').appendChild(pu"+x+");");
+					
+					//PD button
+					eval("pd"+x+".src = './images/PD_White.png'; pd"+x+".onclick = function() {toggleColor(this, \"PD\"); calculate(this);}; document.getElementById('p8').appendChild(pd"+x+");");
+					
+					
+					//Fast button
+					eval("fast"+x+".src = './images/FAST_White.png'; fast"+x+".onclick = function() {toggleColor(this, \"FAST\"); calculate(this);}; document.getElementById('p8').appendChild(fast"+x+");");
+					
+					//register offset
+					document.getElementById('p8').appendChild(document.createTextNode("Register Offset"));
+					eval("registerOffset"+x+".type = 'text'; document.getElementById('p8').appendChild(registerOffset"+x+");");
+					
+					//pinmux mode
+					document.getElementById('p8').appendChild(document.createTextNode("Pinmux Mode"));
+					eval("pinmuxmode"+x+".type = 'text'; document.getElementById('p8').appendChild(pinmuxmode"+x+");");
+					
+					for(var z = 0; z<8; z++) {
+						var optToAdd = document.createElement("option");
+						optToAdd.innerHTML = curModes[z];
+						eval("p8rowmode"+x+".add(optToAdd, null);");
+					}
+					
+					document.getElementById('p8').appendChild(document.createElement('br'));
+				}
+			}
+			function setupP9() {
+				
+			}
+		</script>
+	</head>
+	<body onload="startup();">
+		<form>
+			<div id="p8">
+			
+			</div>
+			
+			<div id="p9">
+			
+			</div>
+		</form>
+	</body>
+</html>
