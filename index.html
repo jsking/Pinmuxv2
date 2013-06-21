@@ -62,7 +62,6 @@
 		<script type="text/javascript">
 		for(var x = 3; x<=46; x++) {
 			var y = x-1;
-			var pinnum;
 			
 			//mode drop-down
 			eval("var p8rowmode"+x+" = document.createElement('select');");
@@ -85,7 +84,30 @@
 			//register offset
 			eval("var pinmuxmode"+x+" = document.createElement('input');");
 		}
+		for(var x = 10; x<=42; x++) {
+			var y = x-1;
 			
+			//mode drop-down
+			eval("var p9rowmode"+x+" = document.createElement('select');");
+				
+			//input enabled button
+			eval("var inputEnabledp9"+x+" = document.createElement('img');");
+			
+			//PU button
+			eval("var pup9"+x+" = document.createElement('img');");
+			
+			//PD button
+			eval("var pdp9"+x+" = document.createElement('img');");
+			
+			//Fast button
+			eval("var fastp9"+x+" = document.createElement('img');");
+			
+			//register offset
+			eval("var registerOffsetp9"+x+" = document.createElement('input');");
+			
+			//register offset
+			eval("var pinmuxmodep9"+x+" = document.createElement('input');");
+		}	
 			/*
 			var ptype = document.getElementById("ptype");
 			var pinId = document.getElementById("pinId");
@@ -104,6 +126,8 @@
 			var offset;
 			var offsets = [];
 			var names = [];
+			var offsetsp9 = [];
+			var namesp9 = [];
 			var curRow = [];
 			var curRowNum;
 			var curModes = [];
@@ -121,6 +145,11 @@
 					var row = indexp8[x];
 					offsets.push(row[1]);
 					names.push(row[2]);
+				}
+				for(x=0; x<48; x++){
+					var row = p9[x];
+					offsetsp9.push(row[1]);
+					namesp9.push(row[2]);
 				}
 				setupP8();
 				setupP9();
@@ -227,16 +256,16 @@
 			function setupP9() {
 				var pinnum = document.createTextNode('1 '+names[0]+" GND");
 				
-				document.getElementById('p8').appendChild(pinnum);
-				document.getElementById('p8').appendChild(document.createElement('br'));
+				document.getElementById('p9').appendChild(pinnum);
+				document.getElementById('p9').appendChild(document.createElement('br'));
 				var pinnum = document.createTextNode('2 '+names[1]+" GND");
 				
-				document.getElementById('p8').appendChild(pinnum);
-				document.getElementById('p8').appendChild(document.createElement('br'));
-				for(var x = 3; x<=46; x++) {
+				document.getElementById('p9').appendChild(pinnum);
+				document.getElementById('p9').appendChild(document.createElement('br'));
+				for(var x = 10; x<=42; x++) {
 					var y = x-1;
-					pinnum = document.createTextNode(x+' '+names[y]+" ");
-					var row = indexp8[y];
+					pinnum = document.createTextNode(x+' '+namesp9[y]+" ");
+					var row = p9[y];
 					curModes = [];
 					curModes.push(row[3]);
 					curModes.push(row[4]);
@@ -249,39 +278,39 @@
 					curModes.push(row[11]);
 					var pinnum = document.createTextNode(x+' '+names[y]+" ");
 					
-					document.getElementById('p8').appendChild(pinnum);
+					document.getElementById('p9').appendChild(pinnum);
 					
 					//mode drop-down
-					eval("p8rowmode"+x+".id = 'p8rowmode'+x; p8rowmode"+x+".onchange = function() {calculate(this);}; document.getElementById('p8').appendChild(p8rowmode"+x+");");
+					eval("p9rowmode"+x+".id = 'p9rowmode'+x; p9rowmode"+x+".onchange = function() {calculate(this);}; document.getElementById('p9').appendChild(p9rowmode"+x+");");
 					
 					//input enabled button
-					eval("inputEnabled"+x+".id = 'inputEnabled'+x; inputEnabled"+x+".src = './images/INPUT_White.png'; inputEnabled"+x+".onclick = function() {toggleColor(this, \"INPUT\"); calculate(this);}; document.getElementById('p8').appendChild(inputEnabled"+x+");");
+					eval("inputEnabledp9p9"+x+".id = 'inputEnabledp9'+x; inputEnabledp9"+x+".src = './images/INPUT_White.png'; inputEnabledp9"+x+".onclick = function() {toggleColor(this, \"INPUT\"); calculate(this);}; document.getElementById('p9').appendChild(inputEnabledp9"+x+");");
 					
 					//PU button
-					eval("pu"+x+".id = 'pu'+x; pu"+x+".src = './images/PU_White.png'; pu"+x+".onclick = function() {toggleColor(this, \"PU\"); calculate(this);}; document.getElementById('p8').appendChild(pu"+x+");");
+					eval("pup9"+x+".id = 'pup9'+x; pup9"+x+".src = './images/PU_White.png'; pup9"+x+".onclick = function() {toggleColor(this, \"PU\"); calculate(this);}; document.getElementById('p9').appendChild(pup9"+x+");");
 					
 					//PD button
-					eval("pd"+x+".id = 'pd'+x; pd"+x+".src = './images/PD_White.png'; pd"+x+".onclick = function() {toggleColor(this, \"PD\"); calculate(this);}; document.getElementById('p8').appendChild(pd"+x+");");
+					eval("pdp9"+x+".id = 'pdp9'+x; pdp9"+x+".src = './images/PD_White.png'; pdp9"+x+".onclick = function() {toggleColor(this, \"PD\"); calculate(this);}; document.getElementById('p9').appendChild(pdp9"+x+");");
 					
 					
 					//Fast button
-					eval("fast"+x+".id = 'fast'+x; fast"+x+".src = './images/FAST_White.png'; fast"+x+".onclick = function() {toggleColor(this, \"FAST\"); calculate(this);}; document.getElementById('p8').appendChild(fast"+x+");");
+					eval("fastp9"+x+".id = 'fastp9'+x; fast"+x+".src = './images/FAST_White.png'; fastp9"+x+".onclick = function() {toggleColor(this, \"FAST\"); calculate(this);}; document.getElementById('p9').appendChild(fastp9"+x+");");
 					
 					//register offset
-					document.getElementById('p8').appendChild(document.createTextNode("Register Offset"));
-					eval("registerOffset"+x+".id = 'registerOffset'+x; registerOffset"+x+".type = 'text'; registerOffset"+x+".value = row[1]; document.getElementById('p8').appendChild(registerOffset"+x+");");
+					document.getElementById('p9').appendChild(document.createTextNode("Register Offset"));
+					eval("registerOffsetp9"+x+".id = 'registerOffsetp9'+x; registerOffsetp9"+x+".type = 'text'; registerOffsetp9"+x+".value = row[1]; document.getElementById('p9').appendChild(registerOffsetp9"+x+");");
 					
 					//pinmux mode
-					document.getElementById('p8').appendChild(document.createTextNode("Pinmux Mode"));
-					eval("pinmuxmode"+x+".id = 'pinmuxmode'+x; pinmuxmode"+x+".type = 'text'; document.getElementById('p8').appendChild(pinmuxmode"+x+");");
+					document.getElementById('p9').appendChild(document.createTextNode("Pinmux Mode"));
+					eval("pinmuxmodep9"+x+".id = 'pinmuxmodep9'+x; pinmuxmodep9"+x+".type = 'text'; document.getElementById('p9').appendChild(pinmuxmodep9"+x+");");
 					
 					for(var z = 0; z<8; z++) {
 						var optToAdd = document.createElement("option");
 						optToAdd.innerHTML = curModes[z];
-						eval("p8rowmode"+x+".add(optToAdd, null);");
+						eval("p9rowmode"+x+".add(optToAdd, null);");
 					}
 					
-					document.getElementById('p8').appendChild(document.createElement('br'));
+					document.getElementById('p9').appendChild(document.createElement('br'));
 				}
 			}
 		</script>
